@@ -1,30 +1,34 @@
 import React from 'react';
+import moment from 'moment';
 import './gridView.css';
 
 
 class GridView extends React.Component {
-  state = {};
+  state = {
+    apiData: [
+      {
+        description: 'Enroll in Care Coordination',
+        date: '10/08/2018',
+      },
+    ]
+  };
   constructor(props) {
     super(props);
   };
+  createTableData(apiData) {
+    return (
+      <div className="row">
+          <div className="box d">{apiData.description}</div>
+          <div className="box e">{apiData.date}</div>
+      </div>
+    );
+  }
   render() {
     return(
       <div className="wrapper">
-        <div className="box a">col 1</div>
-        <div className="box b">col 2</div>
-        <div className="box c">col 3</div>
-
-        <div className="row">
-          <div className="box d">short data</div>
-          <div className="box e">a really long piece of data</div>
-          <div className="box f">short data</div>
-        </div>
-
-        <div className="row">
-          <div className="box d">short data</div>
-          <div className="box e">a really long piece of data</div>
-          <div className="box f">short data</div>
-        </div>
+        <div className="box a">Description</div>
+        <div className="box b">Earliest Target Completion Date</div>
+        {this.state.apiData.map((data) => this.createTableData(data))}
       </div>
     )
   };

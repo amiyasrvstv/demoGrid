@@ -11,7 +11,7 @@ class App extends React.Component {
       <div className="ui container">
         <div className="ui vertical accordion">
           <a class="active title">
-            Issues
+            Current Issues
             <i class="dropdown icon"></i>
           </a>
           <div class="active content">

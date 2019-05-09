@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
   background-color: #fff;
   color: #d3d3d3;
   max-width: 800px;
@@ -9,7 +9,7 @@
 .row {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
 }
 
 div:nth-child(4) { grid-row-start: 2; }
